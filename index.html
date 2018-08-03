@@ -1,60 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>demo bootstrap</title>
-<!-- Bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>demo bootstrap</title>
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!-- 调色板 -->
+	<link rel="stylesheet" href="./css/jquery.minicolors.css">
+
 </head>
+
 <body>
 
 	<div class="container">
-		<div id="textDiv"><p style="font-size: 12px;">
-1、字体Test
-</p>
+		<div id="textDiv">
+			<p style="font-size: 12px; color: rgb(0, 0, 0);">
+				1、字体Test
+			</p>
 		</div>
-		<ul class="lanren">
-			<li>size
-				<span id="title">0</span>
-				<div class="scale_panel">
-					<span class="r">100</span>0
-					<div class="scale" id="bar">
-						<div></div>
-						<span id="btn"></span>
-					</div>
+
+		<div class="row" id="Control">
+			<div class="col-lg-6 col-sm-4 col-12">
+				<div class="form-group">
+					<label for="position-bottom-right">color:
+					</label>
+					<input type="text" id="position-top-right" class="form-control demo" data-position="top right" value="#000000">
 				</div>
-			</li>
-		</ul>
+			</div>
+			<div class="col-lg-6 col-sm-4 col-12">
+				<div class="form-group">
+					<label for="position-top-right">size:</label>
+					<ul class="lanren">
+						<li>size
+							<span id="title">0</span>
+							<div class="scale_panel">
+								<span class="r">100</span>0
+								<div class="scale" id="bar">
+									<div></div>
+									<span id="btn"></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div id="codeOutput">
-			code: 
+			code:
 			<br>
-				<pre id="text_code">&lt;p style="font-size: 12px;"&gt;
+			<pre id="text_code">&lt;p style="font-size: 12px; color: rgb(0, 0, 0);"&gt;
 1、字体Test
 &lt;/p&gt;
 				</pre>
-				<button class="btn" data-clipboard-action="copy" data-clipboard-target="#text_code">Copy</button>
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target="#text_code">Copy</button>
 		</div>
+
 	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="./js/my.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="./js/clipboard.min.js"></script>
+	<script src="./js/jquery.minicolors.js"></script>
+	<!-- 复制 -->
+	<script>
+		var clipboard = new ClipboardJS('.btn');
 
-<script src="./js/my.js"></script>
-<script src="js/jquery-1.11.3.min.js"></script> 
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="./js/clipboard.min.js"></script>
-<!-- 复制 -->
-<script>
-    var clipboard = new ClipboardJS('.btn');
+		clipboard.on('success', function (e) {
+			console.log(e);
+		});
 
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
+		clipboard.on('error', function (e) {
+			console.log(e);
+		});
+	</script>
 
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
-</script>
 </body>
+
 </html>
