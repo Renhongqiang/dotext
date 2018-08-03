@@ -5,6 +5,8 @@ var scale = function (btn,bar,title){
 	this.step=this.bar.getElementsByTagName("div")[0];
 	this.init();
 };
+var oPtxt=document.getElementById("textDiv").children[0];
+var teCode=document.getElementById("text_code");
 scale.prototype={
 	init:function (){
 		var f=this,g=document,b=window,m=Math;
@@ -25,6 +27,19 @@ scale.prototype={
 	ondrag:function (pos,x){
 		this.step.style.width=Math.max(0,x)+'px';
 		this.title.innerHTML=pos+'%';
+		oPtxt.style.fontSize =12 + pos + "px";
+		var oPtxtCode=document.getElementById("textDiv").innerHTML;
+		teCode.innerText = oPtxtCode;
 	}
 }
 new scale('btn','bar','title');
+
+
+
+
+
+
+
+
+
+

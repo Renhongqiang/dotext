@@ -11,25 +11,50 @@
 </head>
 <body>
 
-  <div class="container">
-    <!-- 代码部分begin -->
-<ul class="lanren">
-	<li>red <span id="title">0</span>
-		<div class="scale_panel">
-			<span class="r">100</span>0
-			<div class="scale" id="bar">
-				<div></div>
-				<span id="btn"></span>
-			</div>
+	<div class="container">
+		<div id="textDiv"><p style="font-size: 12px;">
+1、字体Test
+</p>
 		</div>
-	</li>
-</ul>
-  </div>
-
+		<ul class="lanren">
+			<li>size
+				<span id="title">0</span>
+				<div class="scale_panel">
+					<span class="r">100</span>0
+					<div class="scale" id="bar">
+						<div></div>
+						<span id="btn"></span>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div id="codeOutput">
+			code: 
+			<br>
+				<pre id="text_code">&lt;p style="font-size: 12px;"&gt;
+1、字体Test
+&lt;/p&gt;
+				</pre>
+				<button class="btn" data-clipboard-action="copy" data-clipboard-target="#text_code">Copy</button>
+		</div>
+	</div>
 
 <script src="./js/my.js"></script>
 <script src="js/jquery-1.11.3.min.js"></script> 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="./js/clipboard.min.js"></script>
+<!-- 复制 -->
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+</script>
 </body>
 </html>
