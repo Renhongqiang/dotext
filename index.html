@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
 	<meta charset="utf-8">
@@ -11,26 +11,28 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<!-- 调色板 -->
 	<link rel="stylesheet" href="./css/jquery.minicolors.css">
+	<!-- 下拉框 -->
+	<link rel="stylesheet" href="./css/combo.select.css">
 
 </head>
 
 <body>
 
 	<div class="container">
-		<div id="textDiv"><p style="font-size: 12px; color: rgb(0, 0, 0);">
+		<div id="textDiv"><p style="font-size: 12px; font-family: SimSun; color: rgb(0, 0, 0);">
 1、字体Test
 </p>
 		</div>
 
 		<div class="row" id="Control">
-			<div class="col-lg-6 col-sm-4 col-12">
+			<div class="col-lg-4 col-sm-4 col-12">
 				<div class="form-group">
 					<label for="position-bottom-right">color:
 					</label>
 					<input type="text" id="position-top-right" class="form-control demo" data-position="top right" value="#000000">
 				</div>
 			</div>
-			<div class="col-lg-6 col-sm-4 col-12">
+			<div class="col-lg-4 col-sm-4 col-12">
 				<div class="form-group">
 					<label for="position-top-right">size:</label>
 					<ul class="lanren">
@@ -47,16 +49,47 @@
 					</ul>
 				</div>
 			</div>
+			<div class="col-lg-4 col-sm-4 col-12">
+				<div class="form-group">
+					<label for="position-top-right">font:</label>
+					<div class="zzsc">
+						<select>
+							<option value="">字体</option>
+					
+							<optgroup label="windows字体">
+								<option value="SimSun">宋体</option>
+								<option value="SimHei">黑体</option>
+								<option value="Microsoft Yahei">微软雅黑</option>
+								<option value="Microsoft JhengHei">微软正宋体</option>
+								<option value="KaiTi">楷体</option>
+								<option value="NSimSun">新宋体</option>
+								<option value="FangSong">仿宋</option>
+							</optgroup>
+					
+							<optgroup label="OS X字体">
+								<option value="PingFang SC">苹方</option>
+								<option value="STHeiti">华文黑体</option>
+								<option value="STKaiti">华文楷体</option>
+								<option value="STSong">华文宋体</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div id="codeOutput">
 			code:
 			<br>
-			<pre id="text_code">&lt;p style="font-size: 12px; color: rgb(0, 0, 0);"&gt;
+			<pre id="text_code">&lt;p style="font-size: 12px; font-family: SimSun; color: rgb(0, 0, 0);"&gt;
 1、字体Test
 &lt;/p&gt;
 				</pre>
 			<button class="btn" data-clipboard-action="copy" data-clipboard-target="#text_code">Copy</button>
 		</div>
+
+
+		
+		<p class="result">&nbsp;</p>
 
 	</div>
 	<script src="js/jquery.min.js"></script>
@@ -65,6 +98,7 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="./js/clipboard.min.js"></script>
 	<script src="./js/jquery.minicolors.js"></script>
+	<script src="./js/jquery.combo.select.js"></script>
 	<!-- 复制 -->
 	<script>
 		var clipboard = new ClipboardJS('.btn');

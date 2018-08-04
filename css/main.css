@@ -14,7 +14,7 @@ ul.lanren {
     width: 250px;
     position: absolute;
     line-height: 18px;
-    left: 60px;
+    left: 50px;
     top: 5px;
 }
 
@@ -68,21 +68,21 @@ ul.lanren {
 #textDiv {
     border: blue solid 1px;
     margin: 0 auto;
-    width: 800px;
+    width: 900px;
     height: 300px;
     text-align: center;
     line-height: 300px;
 }
 
 #codeOutput {
-    width: 800px;
+    width: 900px;
     margin: 0px auto;
     font-size: 25px;
     color: #3BE3FF;
 }
 
 #text_code {
-    width: 800px;
+    width: 900px;
     height: 100px;
     color: #999;
     font-size: 18px;
@@ -109,6 +109,10 @@ ul.lanren {
 }
 
 #Control {
-    width: 800px;
+    width: 900px;
     margin: 10px auto;
+}
+.zzsc {
+    width: 280px;
+    margin: 0px 10px 0;
 }

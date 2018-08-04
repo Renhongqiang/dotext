@@ -64,3 +64,15 @@ scale.prototype = {
 	}
 }
 new scale('btn', 'bar', 'title');
+
+// 字体
+$(function() {
+	$('select').comboSelect();
+
+	$('select').change(function(e, v) {
+		// $('.result').html('你选择了第' + e.target.selectedIndex + '项，值是' + e.target.value);
+		oPtxt.style.fontFamily = e.target.value;
+		var oPtxtCode = document.getElementById("textDiv").innerHTML;
+		teCode.innerText = oPtxtCode; //动态生成code
+	});
+});
