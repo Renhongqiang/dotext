@@ -57,20 +57,35 @@
 							<option value="">字体</option>
 					
 							<optgroup label="windows字体">
-								<option value="SimSun">宋体</option>
-								<option value="SimHei">黑体</option>
-								<option value="Microsoft Yahei">微软雅黑</option>
-								<option value="Microsoft JhengHei">微软正宋体</option>
-								<option value="KaiTi">楷体</option>
-								<option value="NSimSun">新宋体</option>
-								<option value="FangSong">仿宋</option>
+								<option style="font-family: SimSun;" value="SimSun">宋体</option>
+								<option style="font-family: SimHei;" value="SimHei">黑体</option>
+								<option style="font-family: Yahei;" value="Yahei">微软雅黑</option>
+								<option style="font-family: JhengHei;" value="JhengHei">微软正宋体</option>
+								<option style="font-family: KaiTi;" value="KaiTi">楷体</option>
+								<option style="font-family: NSimSun;" value="NSimSun">新宋体</option>
+								<option style="font-family: FangSong;" value="FangSong">仿宋</option>
 							</optgroup>
 					
 							<optgroup label="OS X字体">
-								<option value="PingFang SC">苹方</option>
-								<option value="STHeiti">华文黑体</option>
-								<option value="STKaiti">华文楷体</option>
-								<option value="STSong">华文宋体</option>
+								<option style="font-family: PingFang;" value="PingFang">苹方</option>
+								<option style="font-family: STHeiti;" value="STHeiti">华文黑体</option>
+								<option style="font-family: STKaiti;" value="STKaiti">华文楷体</option>
+								<option style="font-family: STSong;" value="STSong">华文宋体</option>
+								<option style="font-family: STFangsong;" value="STFangsong">华文仿宋</option>
+								<option style="font-family: STZhongsong;" value="STZhongsong">华文中宋</option>
+								<option style="font-family: STHupo;" value="STHupo">华文琥珀</option>
+								<option style="font-family: STXinwei;" value="STXinwei">华文新魏</option>
+								<option style="font-family: STLiti;" value="STLiti">华文隶书</option>
+								<option style="font-family: STXingkai;" value="STXingkai">华文行楷</option>
+							</optgroup>
+							<optgroup label="office字体">
+								<option style="font-family: YouYuan;" value="YouYuan">幼圆</option>
+								<option style="font-family: LiSu;" value="LiSu">隶书</option>
+								<option style="font-family: STXihei;" value="STXihei">华文细黑</option>
+								<option style="font-family: STCaiyun;" value="STCaiyun">华文彩云</option>
+								<option style="font-family: STLiti;" value="STLiti">华文隶书</option>
+								<option style="font-family: FZShuTi;" value="FZShuTi">华文舒体</option>
+								<option style="font-family: FZYaoti;" value="FZYaoti">方正姚体</option>
 							</optgroup>
 						</select>
 					</div>
@@ -88,8 +103,9 @@
 		</div>
 
 
-		
-		<p class="result">&nbsp;</p>
+		<div id="TouXiang">
+			<img src="./images/touxiang.jpg" alt="Ren">
+		</div>
 
 	</div>
 	<script src="js/jquery.min.js"></script>
@@ -105,11 +121,14 @@
 
 		clipboard.on('success', function (e) {
 			console.log(e);
+			alert("已复制！");
 		});
 
 		clipboard.on('error', function (e) {
 			console.log(e);
+			alert("抱歉，出问题了！");
 		});
+		
 	</script>
 
 </body>
